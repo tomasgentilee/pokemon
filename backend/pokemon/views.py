@@ -11,7 +11,7 @@ class GetPokemonById(APIView):
         source = urllib.request.urlopen(url).read()
         pokemon = json.loads(source)
         print(pokemon)
-        Response({"data": f"{pokemon}"})
+        return Response({"data": f"{pokemon}"})
 
 
 class GetAllPokemons(APIView):
@@ -21,5 +21,5 @@ class GetAllPokemons(APIView):
         url.add_header("User-Agent", "pokemon")
         source = urllib.request.urlopen(url).read()
         pokemons_data = json.loads(source)
-        print(pokemons_data)
-        Response({"data": f"{pokemons_data}"})
+        print(pokemons_data['results'])
+        return Response(pokemons_data['results'])
