@@ -1,0 +1,19 @@
+#Ignorar mi entorno virtual
+env/
+
+# Ignorar cache
+__pycache__/
+*.pyc
+*.pyo
+
+#Ignorar variables de ambiente
+.env
+
+#Ignorar configuraciones del IDE
+.vscode/
+.idea/
+*.swp
+
+#Ignorar los paquetes de node
+node_modules/
+dist/
